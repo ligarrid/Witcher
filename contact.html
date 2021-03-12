@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Lidia Garrido">
+    <meta name="description" content="The Witcher 3 Game - Contact information">
+    <meta name="keywords" content="The Witcher 3, CDProject, GOTY, DLC">
+    
+    <title>The Witcher 3 - Contact</title>
+    
+    <link rel="icon" type="image/png" href="assets/img/png/favicon.png">
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/myStyleSheet.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js"></script>
+</head>
+
+<body class="cust-backg-black">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.png" alt="The Witcher Logo" title="Home Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="purchase.html">Purchase</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-us.html">About us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="cust-banner-container">
+            <img class="img-fluid" src="assets/img/bg-desktop-mobile.jpg" id="image-margin" alt="Toussaint landscape">
+            <div class="container cust-contact-overlay">
+                <img class="cust-imgus-overlay" src="assets/img/witcher-3-geralt-art.png" alt="Geralt logo">
+                <p class="cust-text-overlay">Any thoughts? Come and tell us!</p>
+                <p class="cust-text-overlay"></p>
+            </div>
+        </div>
+    </header>
+    <section class="cust-mart-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 cust-title-container">
+                    <h2>Contact</h2>
+                </div>
+            </div>
+            <form method="post" action="none.php">
+                <div class="row">
+                    <div class="col-md-6">
+                        <fieldset>
+                            <legend class="cust-legend">Contact data</legend>
+                            
+                            <div class="form-group">
+                                <label for="name">Name*</label>
+                                <input class="form-control form-control-md" type="text" placeholder="Name" name="name" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mail">Mail*</label>
+                                <input class="form-control form-control-md" type="email" placeholder="Mail" name="mail" id="mail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="msg">Message*</label>
+                                <textarea style="height: 123px;" class="form-control" rows="3" name="message" placeholder="Message" id="msg" required></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                        <fieldset>
+                            <legend class="cust-legend">Personal Data</legend>
+                            <div class="form-group">
+                                <label for="datepicker">Date of Birth*</label>
+                                <input name="date" id="datepicker" class="form-control form-control-md" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sex" id="male" value="male">
+                                    <label class="form-check-label cust-check" for="male">Male</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="sex" id="fmale" value="female">
+                                    <label class="form-check-label cust-check" for="fmale">Female</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="range" id="form-game-progress">50 % game progress</label>
+                                <input type="range" class="form-control-range custom-range" name="progress" id="range" onchange="updateTextInput(this.value)">
+                                                    <!--id misplaced???-->
+                            </div>
+                            <div class="form-group">
+                                <label for="dlc">DLCs</label>
+                                <select class="custom-select custom-select-sm" name="dlc" id="dlc">
+                                    <option selected>Choose yours</option>
+                                    <option value="1">None</option>
+                                    <option value="2">Blood and Wine</option>
+                                    <option value="3">Hearts of Stone</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary cust-form-button">Submit</button>
+                        <button type="reset" class="btn btn-primary cust-form-button" onclick="updateTextInput(50)">Reset</button>
+                    </div>
+                </div>
+                <p id="cust-note"><strong>Note:</strong> * indicates required fields </p>
+            </form>
+        </div>
+    </section>
+    <div class="cust-mart-3 cust-center-elements">
+        <div class="container jumbotron cust-backg-grey">
+            <p>Or find us at:</p>
+            <p>My address, 12345 Somewhere (Nowhere)</p>
+            <p>someone@some.com</p>
+        </div>
+    </div>
+    <footer class="bg-dark cust-foot">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="cust-foot-p">
+                      My address, 12345 Somewhere (Nowhere) | someone&#x40;some.com
+                    </p>
+                    <p class="cust-foot-p">
+                      Every content, character, image, name or product included in this site are property of <br/> CD PROJECT RED&#169; 2021
+                    </p>
+                </div>
+                <div class="col-md-6 cust-nav-social-right">
+                    <ul class="nav cust-nav-social cust-fa-social">
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-google-plus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa fa-pinterest"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+
+        function updateTextInput(val) {
+            document.getElementById('form-game-progress').innerHTML = val + "% game progress: "
+        }
+    </script>
+    <noscript>Your browser does not support JavaScript!</noscript>
+</body>
+</html>
